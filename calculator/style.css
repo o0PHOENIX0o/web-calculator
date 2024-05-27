@@ -12,6 +12,9 @@ body{
     height: 100vh;
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
+h1{
+    text-decoration: underline;
+}
 
 /* Styling for the main container */
 .container {
