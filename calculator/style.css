@@ -3,26 +3,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+        /* Gradient background */
     color: #fff; /* Set default text color to white */
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 
 /* Styling for the main container */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(45deg, #0a0a0a, #3a4452); /* Gradient background */
+    height: 100vh;
+    display: grid;
+    place-content: center;
 }
 
 /* Styling for the calculator */
 .calculator {
+    position: relative;
     width: 400px;
     padding: 30px 35px;
     text-align: center;
     background: #000; /* Black background */
     border-radius: 5%; /* Rounded corners */
     box-shadow: 0 1px 20px rgb(41, 50, 122); /* Box shadow effect */
+    z-index: 99;
 }
 
 /* Styling for labels */
@@ -38,7 +45,7 @@ label {
     margin-top: 8px;
     background-color: #333; /* Dark gray background */
     border: none;
-    border-radius: 5%; /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     color: #fff; /* White text */
     text-align: end; /* Text alignment to the right */
 }
@@ -66,18 +73,53 @@ label {
 
 /* Styling for buttons */
 button {
+    margin: 7px;
     width: 50px;
     height: 50px;
-    background-color: #323131; /* Dark gray background */
     border: none;
-    border-radius: 5px; /* Rounded corners */
     cursor: pointer;
-    margin: 7px;
     font-size: 15px;
-    transition: background-color 0.4s; /* Smooth background color transition */
+    border-radius: 50%;
+    transition: background-color 0.4s, scale 0.4s;
+    box-shadow: 1px -1px 0px 0px rgb(255 255 255);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%);
+    font-weight: 700;
 }
 
 /* Styling for button hover effect */
 button:hover {
     background-color: #4b4f4b; /* Darker gray background on hover */
+    scale: 1.05;
+}
+
+
+.outer {
+    background: #333;
+    padding: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    
+    /* Add this line */
+}
+
+.outer::after {
+    content: "";
+        position: absolute;
+        height: 650px;
+        width: 202px;
+        background-color: #7c4dff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(34deg);
+        animation: move 2s infinite;
+        box-shadow: -1px 1px 20px 20px rgb(120 95 255);
+        animation: rotate 2s infinite;
+}
+
+
+@keyframes rotate {
+    100%{
+        transform: translate(-50%, -50%) rotate(214deg);
+    }
 }
