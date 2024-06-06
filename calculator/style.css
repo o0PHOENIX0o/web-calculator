@@ -120,7 +120,7 @@ button:hover {
         position: absolute;
         height: 650px;
         width: 202px;
-        background-color: #7c4dff;
+            background: linear-gradient(180deg, rgb(0 51 255 / 30%), rgb(251 251 251 / 30%));
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(34deg);
