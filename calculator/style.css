@@ -98,10 +98,11 @@ button:hover {
     box-shadow: 1px -1px 19px 7px rgb(255 255 255);
 }
 
-button:not(:hover) {
-   background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%);
-}
 
+.button:hover ~ .button,
+        .button:hover + .button {
+             background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%);
+        }
 
 .outer {
     background: #333;
