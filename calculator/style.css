@@ -91,8 +91,15 @@ button {
 
 /* Styling for button hover effect */
 button:hover {
-    background-color: #4b4f4b; /* Darker gray background on hover */
-    scale: 1.05;
+   background-color: #4b4f4b;
+    border: 2px solid white;
+    /* font-size: 18px; */
+    scale: 1.1;
+    box-shadow: 1px -1px 19px 7px rgb(255 255 255);
+}
+
+button:not(:hover) {
+    background-color: lightblue;
 }
 
 
