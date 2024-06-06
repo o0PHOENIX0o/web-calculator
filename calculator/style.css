@@ -53,8 +53,9 @@ label {
     text-align: end; /* Text alignment to the right */
 }
 
-#input_field::hover, 
-#input_field::focus{
+#input_field:hover, 
+#input_field:focus,
+#input_field:focus-within{
     box-shadow: 0px 2px 6px 0px rgb(255 255 255);
 }
 
