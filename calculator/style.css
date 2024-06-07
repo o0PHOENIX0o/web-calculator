@@ -98,6 +98,7 @@ button {
 /* Styling for button hover effect */
 button:hover {
    background-color: #4b4f4b;
+    color: black !important;
     border: 2px solid white;
     /* font-size: 18px; */
     scale: 1.1;
