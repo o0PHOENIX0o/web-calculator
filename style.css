@@ -1,0 +1,119 @@
+:root{
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --body-bg:linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    --button-bg:linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%);
+    --button-box-shadow:-2px -2px 0px 0px rgb(255 255 255);
+
+    --button-hover-bs:inset 2px 2px 5px 1px rgb(255 255 255);
+    --calc-box-shadow: 0px 0px 20px 0px rgb(37 225 255 / 21%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    height: 100vh;
+    background: var(--body-bg);
+}
+
+h1 {
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.calculator {
+    position: relative;
+    width: 400px;
+    padding: 30px 35px;
+    text-align: center;
+    background: #000;
+    border-radius: 5%;
+    box-shadow: var(--calc-box-shadow);
+    z-index: 99;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+#input_field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    text-align: end;
+    letter-spacing: 1px;
+}
+
+#input_field:hover, 
+#input_field:focus {
+    box-shadow: 0px 2px 6px rgb(255, 255, 255);
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    place-items: center;
+    margin-top: 24px;
+    padding: 11px;
+    background: #161616;
+    border-radius: 5%;
+    box-shadow: var(--calc-box-shadow);
+}
+
+.column_1, 
+.column_2, 
+.column_3, 
+.column_4 {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 7px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 50%;
+    transition: background-color 0.4s, transform 0.4s;
+    background: var(--button-bg);
+    box-shadow: var(--button-box-shadow);
+}
+
+button:hover {
+    background-color: #4b4f4b;
+    /* color: black; */
+    border: 1px solid white;
+    transform: scale(1.1);
+    box-shadow: var(--button-hover-bs);
+}
+
+.operator, ion-icon {
+    color: var(--orange-yellow-crayola);
+}
+
+
+.operator ion-icon[name="ellipse"] {
+    width: 6px;
+}
